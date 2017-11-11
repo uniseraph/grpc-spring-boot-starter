@@ -20,6 +20,7 @@ public class GrpcClientService {
     @GrpcClient("cloud-grpc-server")
     private Channel serverChannel;
 
+
     public String sendMessage(String name) {
         SimpleGrpc.SimpleBlockingStub stub = SimpleGrpc.newBlockingStub(serverChannel);
         HelloReply response = stub.sayHello(HelloRequest.newBuilder().setName(name).build());

@@ -54,6 +54,8 @@ public class GrpcClientAutoConfiguration {
         return new GrpcClientBeanPostProcessor();
     }
 
+
+
     @Configuration
     @ConditionalOnBean(DiscoveryClient.class)
     protected static class DiscoveryGrpcClientAutoConfiguration {
